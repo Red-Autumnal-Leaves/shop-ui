@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>首页</title>
+
+    <!--CSS引用-->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/swiper-3.4.2.min.css">
+
+    <!--js引用-->
+    <script type="text/javascript" src="jsmodel/vue.min.js"></script>
+    <script type="text/javascript" src="jsmodel/vue-router.js"></script>
+    <script type="text/javascript" src="js/swiper-3.4.2.jquery.min.js"></script>
+</head>
+<body>
+
+<!--测试-->
+<div id="app">
+    <ol>
+        <li v-for="site in sites">
+            {{ site.name }}
+        </li>
+    </ol>
+</div>
+
+<script>
+    new Vue({
+        el: '#app',
+        data: {
+            sites: [
+                { name: 'Runoob' },
+                { name: 'Google' },
+                { name: 'Taobao' }
+            ]
+        }
+    })
+</script>
+
+</body>
+</html>
